@@ -2,15 +2,12 @@ package sk.kosickaakademia.matorudolf.exchange.calc;
 
 import sk.kosickaakademia.matorudolf.exchange.api.ApiRequest;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class CalcExchangeRates {
     private final String[] rates= new String[] {"USD","HUF", "CZK","BTC","PLN"};
 
-    public void calculate(double eur){
+    public void calculate(double eur, String[] currency){
         if(eur<0){
             System.out.println("NO Negative value!!!!");
             return;
@@ -36,4 +33,6 @@ public class CalcExchangeRates {
     private void print(String from, String to, double eur, double result, double rate){
         System.out.println(eur +" "+from+" -> "+result+" "+to+" (exchange rate: "+rate+" )");
     }
+    Map<String,Double> values = new HashMap<>();
+    Iterator<Map.Entry<>>
 }
